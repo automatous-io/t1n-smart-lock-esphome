@@ -1,6 +1,6 @@
-# T1N Smart Module
+# T1N Smart Lock (ESPHome)
 
-Native Apple HomeKey + HomeKit NFC enabled smart lock system for the T1N series Sprinter that reads real lock state from the factory CTM. Optional integration into Home Assistant to mirror door ajar states for additional automation. Local and remote lock capability anywhere your van gets internet - all from your favorite Apple device.
+Native Apple HomeKey + HomeKit NFC enabled smart lock system for the T1N series Sprinter that reads real lock state from the factory CTM. Integration into Home Assistant and exposed to Homekit via bridge to mirror door ajar states for additional automation. Local and remote lock capability anywhere your van gets internet - all from your favorite Apple device.
 
 Long live the million mile Sprinter!
 
@@ -18,8 +18,8 @@ This costs a fraction of what a replacement fob does and can be integrated easil
 
 ## Features
 
-- **Apple HomeKey** — tap iPhone or Apple Watch on the NFC reader to lock/unlock, even in Express Mode when Apple device is 'dead'
-- **Native HomeKit** via [HAP-ESPHome](https://github.com/rednblkx/HAP-ESPHome)
+- **Native Apple HomeKey** — tap iPhone or Apple Watch on the NFC reader to lock/unlock, even in Express Mode when Apple device is 'dead'
+- **HomeKit** via [HAP-ESPHome](https://github.com/rednblkx/HAP-ESPHome)
 - **Siri enabled** - ask Siri to toggle the locks using just your voice
 - **Home Assistant** compatible for optional door ajar sensor integration into Apple Home as HomeKit accessory
 - **True lock/door ajar - state detection** — PC817 optocouplers read CTM LED sense lines (galvanically isolated)
@@ -216,7 +216,7 @@ Two 3D-printed enclosures: an angled dash module with NFC face and magnetic lid,
 ## Flashing
 
 ```bash
-gh repo clone automatous-io/t1n-smart-module
+gh repo clone automatous-io/t1n-smart-lock-esphome
 cd firmware
 cp secrets.yaml.example secrets.yaml   # fill in your credentials
 esphome run t1n_smart_module.yaml
@@ -231,7 +231,7 @@ Pair in Apple Home with setup code `159-35-728`.
 - [ESPHome](https://esphome.io/)
 - [HAP-ESPHome](https://github.com/rednblkx/HAP-ESPHome) — HomeKit + HomeKey
 - [Apple Home Hub](https://support.apple.com/en-us/102557)
-- [Home Assistant](https://www.home-assistant.io/) (optional)
+- [Home Assistant](https://www.home-assistant.io/)
 
 ---
 
